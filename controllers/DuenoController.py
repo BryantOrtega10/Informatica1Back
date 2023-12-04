@@ -50,9 +50,7 @@ def crearNuevoDueno():
 @token_requerido
 def obtenerDatosDueno():
     req_id_dueno = current_app.config['DUENO_ID']
-    print(req_id_dueno)
     dueno = consultarDueno(req_id_dueno)
-    print(dueno)
     if dueno is None:
         return jsonify({"success": False, "error": "No existe un dueño con ese id"}) , HTTPStatus.BAD_REQUEST
     

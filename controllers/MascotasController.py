@@ -28,7 +28,6 @@ def obtenerMascotasEspecifica(mascota_id):
 @token_requerido
 def agregarMascotas():
     json_recibido = request.get_json()
-    #TODO Verificar datos enviados
     dueno_id = current_app.config['DUENO_ID']
     nombre = json_recibido["nombre"]
     especie = json_recibido["especie"]
@@ -59,7 +58,6 @@ def asociarMascotas(mascota_id):
 @token_requerido
 def modificarMascotas(mascota_id):
     json_recibido = request.get_json()
-    #TODO Verificar datos enviados
     
     nombre = json_recibido["nombre"]
     especie = json_recibido["especie"]
